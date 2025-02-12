@@ -1,8 +1,8 @@
 import csv
 import time
-import np
+import numpy as np
 
-file = open('test.csv', newline = None)
+file = open('test.csv', 'w', newline = None)
 
 csvwriter = csv.writer(file, delimiter=',')
 
