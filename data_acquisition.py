@@ -16,10 +16,10 @@ else:
   file_name = sys.argv[2]
 
 file = open(file_name, "w", newline=None)
-file_writer = csv.writer(file)
-file_writer.writerow(["Time", "Temperature", "Humidity", "Pressure", "Altitude", "Gas", 
-                      "PM1.0", "PM2.5", "PM10", 
-                      "Particles > 0.3um", "Particles > 0.5um"])
+csvwriter = csv.writer(file)
+csvwriter.writerow(["Time", "Temperature", "Humidity", "Pressure", "Altitude", "Gas", 
+                    "PM1.0", "PM2.5", "PM10", 
+                    "Particles > 0.3um", "Particles > 0.5um"])
 
 i2c = board.I2C()
 bme680 = adafruit_bme680.Adafruit_BME680_I2C(i2c)
